@@ -14,14 +14,9 @@ void setup()
 void loop()
 {
   // turn the red LED on, green LED off
-  digitalWrite(LED_RED, HIGH);
-  digitalWrite(LED_GREEN, LOW);
-  Serial.println("Red on, greenoff");
-
+  red_on_green_off();
   delay(250); // Wait for 1000 millisecond(s)
   // turn the red LED, green LED on
-  digitalWrite(LED_GREEN, HIGH);
-  digitalWrite(LED_RED, LOW);
-  Serial.println("Red off, green on");
+  green_on_red_off();
   delay(250); // Wait for 1000 millisecond(s)
 }
