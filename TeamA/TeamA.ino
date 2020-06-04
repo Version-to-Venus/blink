@@ -21,20 +21,28 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   // Drive forwards
+  forwards();
+  delay(2000);
+
+  // stop
+  roverstop();
+  delay(2000);
+}
+
+void forwards(){
   digitalWrite(leftEnb, HIGH);  
   digitalWrite(leftFwd, HIGH);                    
   digitalWrite(leftRev, LOW);
   digitalWrite(rightEnb, HIGH);  
   digitalWrite(rightFwd, HIGH);                    
-  digitalWrite(rightRev, LOW); 
-  delay(2000);
+  digitalWrite(rightRev, LOW);
+}
 
-  // stop
+void roverstop(){
   digitalWrite(leftEnb, HIGH);  
   digitalWrite(leftFwd, LOW);                    
   digitalWrite(leftRev, LOW);
   digitalWrite(rightEnb, HIGH);  
   digitalWrite(rightFwd, LOW);                    
-  digitalWrite(rightRev, LOW); 
-  delay(2000);
+  digitalWrite(rightRev, LOW);
 }
