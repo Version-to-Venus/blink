@@ -1,3 +1,4 @@
+// Pin connections on rover
 const int rightFwd = 7;
 const int rightRev = 8;
 const int rightEnb = 9;
@@ -19,10 +20,21 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite(leftFwd, HIGH);   // turn the LED on (HIGH is the voltage level)
-  digitalWrite(rightFwd, LOW);
-  delay(500);                       // wait for a second
-  digitalWrite(leftFwd, LOW);    // turn the LED off by making the voltage LOW
-  digitalWrite(rightFwd, HIGH);
-  delay(500);                       // wait for a second
+  // Drive forwards
+  digitalWrite(leftEnb, HIGH);  
+  digitalWrite(leftFwd, HIGH);                    
+  digitalWrite(leftRev, LOW);
+  digitalWrite(rightEnb, HIGH);  
+  digitalWrite(rightFwd, HIGH);                    
+  digitalWrite(rightRev, LOW); 
+  delay(2000);
+
+  // stop
+  digitalWrite(leftEnb, HIGH);  
+  digitalWrite(leftFwd, LOW);                    
+  digitalWrite(leftRev, LOW);
+  digitalWrite(rightEnb, HIGH);  
+  digitalWrite(rightFwd, LOW);                    
+  digitalWrite(rightRev, LOW); 
+  delay(2000);
 }
