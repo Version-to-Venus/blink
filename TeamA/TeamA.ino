@@ -1,11 +1,20 @@
-const int leftFwd = 9;
 const int rightFwd = 7;
+const int rightRev = 8;
+const int rightEnb = 9;
+const int leftEnb = 10;
+const int leftRev = 11;
+const int leftFwd = 12;
+
 
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
-  pinMode(leftFwd, OUTPUT);
   pinMode(rightFwd, OUTPUT);
+  pinMode(rightRev, OUTPUT);
+  pinMode(rightEnb, OUTPUT);
+  pinMode(leftEnb, OUTPUT);
+  pinMode(leftRev, OUTPUT);
+  pinMode(leftFwd, OUTPUT);
 }
 
 // the loop function runs over and over again forever
