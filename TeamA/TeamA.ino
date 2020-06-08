@@ -46,3 +46,13 @@ void roverstop(){
   digitalWrite(rightFwd, LOW);                    
   digitalWrite(rightRev, LOW);
 }
+
+void turnLeft(int delaytime){
+  digitalWrite(leftEnb, HIGH);  
+  digitalWrite(leftFwd, LOW);                    
+  digitalWrite(leftRev, HIGH);
+  digitalWrite(rightEnb, HIGH);  
+  digitalWrite(rightFwd, HIGH);                    
+  digitalWrite(rightRev, LOW);
+  delay(delayTime);
+}
