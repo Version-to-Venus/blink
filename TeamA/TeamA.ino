@@ -26,7 +26,15 @@ void loop() {
 
   // stop
   roverstop();
-  delay(2000);
+  delay(500);
+
+  // turn left
+  turnLeft(750);
+
+  // stop
+  roverstop();
+  delay(500);
+
 }
 
 void forwards(){
