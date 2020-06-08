@@ -47,12 +47,22 @@ void roverstop(){
   digitalWrite(rightRev, LOW);
 }
 
-void turnLeft(int delaytime){
+void turnLeft(int delayTime){
   digitalWrite(leftEnb, HIGH);  
   digitalWrite(leftFwd, LOW);                    
   digitalWrite(leftRev, HIGH);
   digitalWrite(rightEnb, HIGH);  
   digitalWrite(rightFwd, HIGH);                    
   digitalWrite(rightRev, LOW);
+  delay(delayTime);
+}
+
+void turnRight(int delayTime){
+  digitalWrite(leftEnb, HIGH);  
+  digitalWrite(leftFwd, HIGH);                    
+  digitalWrite(leftRev, LOW);
+  digitalWrite(rightEnb, HIGH);  
+  digitalWrite(rightFwd, LOW);                    
+  digitalWrite(rightRev, HIGH);
   delay(delayTime);
 }
